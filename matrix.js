@@ -28,6 +28,13 @@ var draw = function() {
     });
 };
 
+window.addEventListener('resize', function() {
+    width  = window.innerWidth;
+    height = window.innerHeight;
+    ctx.canvas.width  = width;
+    ctx.canvas.height = height;
+}, false);
+
 function RunMatrix() {
     if(typeof Game_Interval != "undefined") clearInterval(Game_Interval);
     Game_Interval = setInterval(draw, 60);
