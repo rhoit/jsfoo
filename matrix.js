@@ -10,12 +10,15 @@ var draw = function() {
     ctx.fillStyle = '#0F0';
     ctx.font = '15pt Georgia';
     yPositions.map(function(y, index) {
-        // latin 1e2
-        var text = [];
-        text[0] = String.fromCharCode("क".charCodeAt() + parseInt(Math.random() * 33));
-        text[1] = String.fromCharCode("아".charCodeAt() + parseInt(Math.random() * 33));
+        var char_pool = [];
+        char_pool[0] = String.fromCharCode("क".charCodeAt() + Math.random() * 33);
+        char_pool[1] = String.fromCharCode("아".charCodeAt() + Math.random() * 24);
+        char_pool[2] = String.fromCharCode("あ".charCodeAt() + Math.random() * 46);
+        char_pool[2] = String.fromCharCode("a".charCodeAt() + Math.random() * 26);
+
+        var rand_i = Math.round(Math.random() * (char_pool.length - 1));
         x = (index * 25) + 25;
-        matrix_canvas.getContext('2d').fillText(text[Math.round(Math.random()*1)], x, y);
+        matrix_canvas.getContext('2d').fillText(char_pool[rand_i], x, y);
         if(y > 100 + Math.random() * 1e4) {
             yPositions[index] = 0;
         }
