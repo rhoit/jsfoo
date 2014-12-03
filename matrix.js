@@ -11,9 +11,11 @@ var draw = function() {
     ctx.font = '15pt Georgia';
     yPositions.map(function(y, index) {
         // latin 1e2
-        text = String.fromCharCode("क".charCodeAt() + Math.random() * 33);
+        var text = [];
+        text[0] = String.fromCharCode("क".charCodeAt() + parseInt(Math.random() * 33));
+        text[1] = String.fromCharCode("아".charCodeAt() + parseInt(Math.random() * 33));
         x = (index * 25) + 25;
-        matrix_canvas.getContext('2d').fillText(text, x, y);
+        matrix_canvas.getContext('2d').fillText(text[Math.round(Math.random()*1)], x, y);
         if(y > 100 + Math.random() * 1e4) {
             yPositions[index] = 0;
         }
