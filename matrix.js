@@ -11,7 +11,7 @@ var draw = function() {
     ctx.font = '15pt Georgia';
     yPositions.map(function(y, index) {
         // latin 1e2
-        text = String.fromCharCode(1e2); // + Math.random() * 30);
+        text = String.fromCharCode("क".charCodeAt() + Math.random() * 33);
         x = (index * 25) + 25;
         matrix_canvas.getContext('2d').fillText(text, x, y);
         if(y > 100 + Math.random() * 1e4) {
