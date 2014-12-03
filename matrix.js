@@ -14,7 +14,7 @@ var draw = function() {
         char_pool[0] = String.fromCharCode("क".charCodeAt() + Math.random() * 33);
         char_pool[1] = String.fromCharCode("아".charCodeAt() + Math.random() * 24);
         char_pool[2] = String.fromCharCode("あ".charCodeAt() + Math.random() * 46);
-        char_pool[2] = String.fromCharCode("a".charCodeAt() + Math.random() * 26);
+        char_pool[3] = String.fromCharCode("a".charCodeAt() + Math.random() * 26);
 
         var rand_i = Math.round(Math.random() * (char_pool.length - 1));
         x = (index * 25) + 25;
@@ -30,7 +30,7 @@ var draw = function() {
 
 function RunMatrix() {
     if(typeof Game_Interval != "undefined") clearInterval(Game_Interval);
-    Game_Interval = setInterval(draw, 40);
+    Game_Interval = setInterval(draw, 60);
 }
 
 RunMatrix();
