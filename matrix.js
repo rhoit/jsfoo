@@ -17,7 +17,7 @@ var draw = function() {
         char_pool[3] = String.fromCharCode("a".charCodeAt() + Math.random() * 26);
 
         var rand_i = Math.round(Math.random() * (char_pool.length - 1));
-        x = (index * 25) + 25;
+        x = (index * 25) + 5; // 5: offset from (0, 0)
         matrix_canvas.getContext('2d').fillText(char_pool[rand_i], x, y);
         if(y > 100 + Math.random() * 1e4) {
             yPositions[index] = 0;
