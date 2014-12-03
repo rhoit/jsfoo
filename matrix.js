@@ -5,7 +5,7 @@ var yPositions = Array(300).join(0).split('');
 var ctx = matrix_canvas.getContext('2d');
 
 var draw = function() {
-    ctx.fillStyle='rgba(0, 0, 0, .05)';
+    ctx.fillStyle = 'rgba(0, 0, 0, .08)'; //alpha: erase old matrix
     ctx.fillRect(0, 0, width, height);
     ctx.fillStyle = '#0F0';
     ctx.font = '15pt Georgia';
@@ -17,13 +17,13 @@ var draw = function() {
         char_pool[3] = String.fromCharCode("a".charCodeAt() + Math.random() * 26);
 
         var rand_i = Math.round(Math.random() * (char_pool.length - 1));
-        x = (index * 25) + 5; // 5: offset from (0, 0)
+        x = (index * 27) + 5; // 5: offset x-axis
         matrix_canvas.getContext('2d').fillText(char_pool[rand_i], x, y);
         if(y > 100 + Math.random() * 1e4) {
             yPositions[index] = 0;
         }
         else {
-            yPositions[index] = y + 25;
+            yPositions[index] = y + 27;
         }
     });
 };
@@ -37,7 +37,7 @@ window.addEventListener('resize', function() {
 
 function RunMatrix() {
     if(typeof Game_Interval != "undefined") clearInterval(Game_Interval);
-    Game_Interval = setInterval(draw, 60);
+    Game_Interval = setInterval(draw, 60); //time tweaker
 }
 
 RunMatrix();
