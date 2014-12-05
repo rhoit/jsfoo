@@ -40,13 +40,6 @@ function RunMatrix() {
     Game_Interval = setInterval(draw, 60); //time tweaker
 }
 
-RunMatrix();
-
 function StopMatrix() {
     clearInterval(Game_Interval);
 }
-
-//setInterval(draw, 33);
-// $("button#pause").click(function(){
-//     StopMatrix();});
-// $("button#play").click(function(){RunMatrix();});
