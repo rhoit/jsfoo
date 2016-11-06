@@ -1,11 +1,12 @@
-* matrix.js
+#+TITLE: matrix
 
 *Matrix* effect using multiple scripts.
 
-Click it too see [[http://rhoit.github.io/matrix.js/][demo]].
 
 This code is based on work of [[http://www.arungudelli.com/html5/matrix-effect-using-html5-and-javascript/][Arunkumar Gudelli]].
 
-** Why? Yet again!
+
+*Why? Yet again!*
+
 
 Just want to keep some more =scripts= into the *matrix*.

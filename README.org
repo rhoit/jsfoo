@@ -1,0 +1,4 @@
+#+TITLE: jsfoo
+#+DATE: Friday, Nov 04 2016
+
+some of my js foo http://rhoit.github.io/jsfoo/
